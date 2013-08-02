@@ -50,7 +50,7 @@ public class World {
 						 break;
 					 case 2: m.Fire();
 					 		b.die();
-						 break
+						 break;
 					 }
 					break;
 				case 4: m.savePrincess(b, p);

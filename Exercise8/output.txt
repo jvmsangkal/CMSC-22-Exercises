@@ -1,0 +1,20 @@
+Name: Arian Jacildo
+Alias: AJ
+Age: 58
+Height: 3ft 2in
+---------------------------------
+Name: Jach Hermocilla
+Alias: JH
+Age: 67
+Height: 8ft 3in
+---------------------------------
+Name: Froilan Tandoc
+Alias: FT
+Age: 23
+Height: 2ft 0in
+---------------------------------
+Name: James Carlo Plaras
+Alias: JCP
+Age: 61
+Height: 9ft 2in
+---------------------------------

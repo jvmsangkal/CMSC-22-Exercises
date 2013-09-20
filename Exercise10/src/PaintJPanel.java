@@ -74,14 +74,23 @@ public class PaintJPanel extends JPanel{
 		if(Shape.equals("circle")){
 			g.fillArc(x-9, y-9, 18, 18, 0, 360);	
 		}else if(Shape.equals("triangle")){
-			int[] xPoints={x-20,x,x+20};
+			/*int[] xPoints={x-20,x,x+20};
 			int[] yPoints={y+10,y-10,y+10};
 			g.fillPolygon(xPoints, yPoints, 3);
 			int[] xPoints2={x,x-10,x+10};
 			int[] yPoints2={y+10,y,y};
 			g.setColor(Color.WHITE);
 			g.fillPolygon(xPoints2, yPoints2, 3);
-			g.setColor(c);
+			g.setColor(c);*/
+			int[] xPoints2={x,x-10,x+10};
+			int[] yPoints2={y-9,y+1,y+1};
+			g.fillPolygon(xPoints2, yPoints2, 3);
+			int[] xPoints3={x-8,x-18,x+2};
+			int[] yPoints3={y,y+10,y+10};
+			g.fillPolygon(xPoints3, yPoints3, 3);
+			int[] xPoints4={x+8,x-2,x+18};
+			int[] yPoints4={y,y+10,y+10};
+			g.fillPolygon(xPoints4, yPoints4, 3);
 		}else if(Shape.equals("cross")){
 			g.fillRect(x-10, y-20, 15, 40);
 			g.fillRect(x-20, y-10, 35, 15);

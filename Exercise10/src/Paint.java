@@ -17,14 +17,15 @@ public class Paint {
 	public static void main(String[] args) {
 		JFrame mf = new JFrame("Paint");
 		mf.setSize(700,700);
-		Icon circle=new ImageIcon("circle.gif");
-		Icon triangle=new ImageIcon("triangle.gif");
-		Icon cross=new ImageIcon("cross.jpeg");
+		Icon circle=new ImageIcon("circle.png");
+		Icon triangle=new ImageIcon("triangle.png");
+		Icon cross=new ImageIcon("cross.png");
 		Icon hexagon=new ImageIcon("hexagon.png");
-		//shape1.setIcon(circle);
-		//shape2.setIcon(triangle);
-		//shape3.setIcon(cross);
-		//shape4.setIcon(hexagon);
+		
+		shape1.setIcon(circle);
+		shape2.setIcon(triangle);
+		shape3.setIcon(cross);
+		shape4.setIcon(hexagon);
 		
 		shape1.setName("circle");
 		shape2.setName("triangle");
@@ -107,20 +108,25 @@ public class Paint {
 				pane1.setC(color5.getBackground());
 			}
 		});
-		pane1.addMouseMotionListener(new MouseAdapter() {
+		
+		pane1.addMouseListener(new MouseAdapter() {
+			
 			public void mousePressed(MouseEvent e){
 				pane1.setX(e.getX());
 				pane1.setY(e.getY());
-				pane1.setClicked(true);	
-				//pane1.paintComponent(pane1.getGraphics());
-				
+				pane1.setClicked(true);
+				//pane1.repaint();
+				pane1.paintComponent(pane1.getGraphics());
 			}
+		});
+		pane1.addMouseMotionListener(new MouseAdapter() {
+			
 			public void mouseDragged(MouseEvent e){
 				pane1.setX(e.getX());
 				pane1.setY(e.getY());
 				pane1.setClicked(true);
-				pane1.repaint();
-				//pane1.paintComponent(pane1.getGraphics());
+				//pane1.repaint();
+				pane1.paintComponent(pane1.getGraphics());
 			}
 			public void mouseReleased(MouseEvent e){
 				pane1.setClicked(false);	

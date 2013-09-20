@@ -14,6 +14,7 @@ public class PaintJPanel extends JPanel{
 	public PaintJPanel() {
 		super();
 		this.setBackground(Color.WHITE);
+		
 	}
 
 	public PaintJPanel(String shape, Color c, int x, int y, boolean clicked) {
@@ -66,6 +67,7 @@ public class PaintJPanel extends JPanel{
 	}
 
 	public void paintComponent(Graphics g){
+		this.setBackground(Color.WHITE);
 		super.paintComponents(g);
 		g.setColor(c);
 		if (clicked==true){

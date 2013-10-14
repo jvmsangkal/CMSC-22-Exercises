@@ -1,3 +1,10 @@
+import java.awt.Image;
+import java.io.File;
+import java.io.InputStream;
+
+import javax.imageio.ImageIO;
+import javax.swing.JFrame;
+
 
 public class SNMStat implements SNMStatInterface{
 	private double currentCash;
@@ -9,6 +16,8 @@ public class SNMStat implements SNMStatInterface{
 	private double maintainanceCost;
 	private double memberDiscount;
 	private int rateOfQueuedGuest;
+	public static JFrame mainFrame;
+	public static SuperController controller;
 	
 	public double getMemberDiscount() {
 		return memberDiscount;
@@ -75,7 +84,17 @@ public class SNMStat implements SNMStatInterface{
 		return 0;
 	}
 	
-
+	public static Image loadImage(String filename){
+		
+		try{
+			return ImageIO.read(new File(filename));
+		}
+		catch(Exception e){
+			e.printStackTrace();
+			return null;
+		}
+	
+	}
 
 
 }

@@ -38,8 +38,4 @@ public class Parameter implements Serializable{
 		this.doubleValue = doubleValue;
 	}
 	
-	
-	
-	
-	
 }

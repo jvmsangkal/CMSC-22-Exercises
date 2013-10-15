@@ -45,7 +45,7 @@ class MainMenuListener implements ActionListener{
 		// TODO Auto-generated method stub
 		switch(b.getText()){
 		case "Quit":
-			SNMStat.mainFrame.dispose();	
+			System.exit(0);
 			break;
 		case "Start Simulation":
 			MainController mc = new MainController(new MainView());

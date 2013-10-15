@@ -8,11 +8,11 @@ import javax.swing.JFrame;
 
 public class SNMStat implements SNMStatInterface{
 	private double currentCash;
-	private int currentSpaSessionsCount;
-	private int currentMassageSessionsCount;
-	private double totalMaintainanceCost;
-	private double totalSpaSales;
-	private double totalMassageSales;
+	private int currentSpaSessionsCount=0;
+	private int currentMassageSessionsCount=0;
+	private double totalMaintainanceCost=0;
+	private double totalSpaSales=0;
+	private double totalMassageSales=0;
 	private double maintainanceCost;
 	private double memberDiscount;
 	private int rateOfQueuedGuest;
@@ -35,19 +35,19 @@ public class SNMStat implements SNMStatInterface{
 		return currentCash;
 	}
 	public void setCurrentCash(double currentCash) {
-		currentCash = currentCash;
+		this.currentCash = currentCash;
 	}
 	public int getCurrentSpaSessionsCount() {
 		return currentSpaSessionsCount;
 	}
 	public void setCurrentSpaSessionsCount(int currentSpaSessionsCount) {
-		currentSpaSessionsCount = currentSpaSessionsCount;
+		this.currentSpaSessionsCount = currentSpaSessionsCount;
 	}
 	public int getCurrentMassageSessionsCount() {
 		return currentMassageSessionsCount;
 	}
-	static public void setCurrentMassageSessionsCount(int currentMassageSessionsCount) {
-		currentMassageSessionsCount = currentMassageSessionsCount;
+	public void setCurrentMassageSessionsCount(int currentMassageSessionsCount) {
+		this.currentMassageSessionsCount = currentMassageSessionsCount;
 	}
 	public double getTotalMaintainanceCost() {
 		return totalMaintainanceCost;
@@ -59,18 +59,17 @@ public class SNMStat implements SNMStatInterface{
 		return totalSpaSales;
 	}
 	public void setTotalSpaSales(double totalSpaSales) {
-		totalSpaSales = totalSpaSales;
+		this.totalSpaSales = totalSpaSales;
 	}
 	public double getTotalMassageSales() {
 		return totalMassageSales;
 	}
 	public void setTotalMassageSales(double totalMassageSales) {
-		totalMassageSales = totalMassageSales;
+		this.totalMassageSales = totalMassageSales;
 	}
 
 	public double computeAverageEarningsPerMinute() {
-		// TODO Auto-generated method stub
-		return 0;
+		return (MainView.snmStat.getTotalMassageSales()+MainView.snmStat.getTotalSpaSales())/MainView.minutes;
 	}
 
 	public double getMaintainanceCost() {
@@ -81,7 +80,7 @@ public class SNMStat implements SNMStatInterface{
 	}
 	public double computeSalesPerSecond() {
 		// TODO Auto-generated method stub
-		return 0;
+		return (MainView.snmStat.getTotalMassageSales()+MainView.snmStat.getTotalSpaSales())/MainView.seconds;
 	}
 	
 	public static Image loadImage(String filename){

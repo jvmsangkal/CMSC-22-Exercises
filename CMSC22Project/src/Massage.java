@@ -52,6 +52,7 @@ public class Massage extends Equipment{
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
+				
 				for(int i=0; i<al.size();i++){
 					if((Integer.parseInt(al.get(i).getText()))==0){
 						if(ll.peek()!=null){

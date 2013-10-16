@@ -1,16 +1,16 @@
-Current Cash: 867450.8000000007
+Current Cash: 645850.4900000005
 ---------------------------------
-Number of Current Spa Sessions: 8
+Number of Current Spa Sessions: 5
 ---------------------------------
-Number of Current Massage Sessions: 20
+Number of Current Massage Sessions: 9
 ---------------------------------
-Total cost paid for maintenance: 3799.2399999999925
+Total cost paid for maintenance: 1999.6000000000001
 ---------------------------------
-Average earnings per minute: 7249.97
+Average earnings per minute: Infinity
 ---------------------------------
-Total sales per second: 95.39434210526316
+Total sales per second: 96.247
 ---------------------------------
-Sales for spa sessions: 1024.99
+Sales for spa sessions: 699.97
 ---------------------------------
-Sales received for massage sessions:1024.99
+Sales received for massage sessions:699.97
 ---------------------------------

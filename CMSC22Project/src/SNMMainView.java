@@ -16,7 +16,7 @@ public class SNMMainView extends JPanel{
 		description.addActionListener(new MainMenuListener(description));
 		quit.addActionListener(new MainMenuListener(quit));
 		this.add(start);
-		this.add(description);
+		//this.add(description);
 		this.add(quit);
 	}
 	

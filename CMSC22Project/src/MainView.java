@@ -1,4 +1,5 @@
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.ScrollPane;
@@ -50,7 +51,7 @@ public class MainView extends JPanel{
 		//stations.setBackground(Color.GREEN);
 		status = new JPanel();
 		status.setLayout(new BorderLayout());
-		
+		//stations.setBackground(Color.);
 		activityLog= new JTextArea(10,10);
 		activityLog.setFocusable(false);
 		JScrollPane scroll = new JScrollPane (activityLog,JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
@@ -193,6 +194,33 @@ public class MainView extends JPanel{
 				
 				seconds++;
 				salesPerSecond.setText(""+snmStat.computeSalesPerSecond());
+				
+				if (snmStat.getCurrentCash()<=0){
+					try{
+						PrintWriter pw = new PrintWriter("output.txt");
+						pw.println("Current Cash: "+snmStat.getCurrentCash());
+						pw.println("---------------------------------");
+						pw.println("Number of Current Spa Sessions: "+ snmStat.getCurrentSpaSessionsCount());
+						pw.println("---------------------------------");
+						pw.println("Number of Current Massage Sessions: "+snmStat.getCurrentMassageSessionsCount());
+						pw.println("---------------------------------");
+						pw.println("Total cost paid for maintenance: "+snmStat.getTotalMaintainanceCost());
+						pw.println("---------------------------------");
+						pw.println("Average earnings per minute: "+snmStat.computeAverageEarningsPerMinute());
+						pw.println("---------------------------------");
+						pw.println("Total sales per second: "+snmStat.computeSalesPerSecond());
+						pw.println("---------------------------------");
+						pw.println("Sales for spa sessions: "+snmStat.getTotalSpaSales());
+						pw.println("---------------------------------");
+						pw.println("Sales received for massage sessions:"+snmStat.getTotalSpaSales());
+						pw.println("---------------------------------");
+						pw.close();
+						}
+						catch(Exception x){
+							
+						}
+					System.exit(0);	
+				}
 			}
 		},1000,1000);
 		

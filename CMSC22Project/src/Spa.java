@@ -53,6 +53,7 @@ public class Spa extends Equipment{
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
+				
 				for(int i=0; i<al.size();i++){
 					if((Integer.parseInt(al.get(i).getText()))==0){
 						Guest g=ll.peek();
@@ -78,6 +79,7 @@ public class Spa extends Equipment{
 							
 						}
 						if(g!=null && g.isWillMassage()){
+							boolean flag=false;
 							MainView.activityLog.append("Someone from a Spa wants massage.\n");
 							for(int j=0;j<MainView.massageStations.size();j++){
 								if(MainView.massageStations.get(j).ll.size()<MainView.massageStations.get(j).getTotalSlots()){
@@ -88,10 +90,17 @@ public class Spa extends Equipment{
 											MainView.massageStations.get(j).al.get(k).setText(""+(5+MainView.randomGenerator.nextInt(4)));
 										MainView.snmStat.setCurrentMassageSessionsCount(MainView.snmStat.getCurrentMassageSessionsCount()+1);
 										MainView.currentMassageSessions.setText(""+MainView.snmStat.getCurrentMassageSessionsCount());
+										flag=true;
+										break;
+		
 										}
+										
 										}
-										MainView.queueCount.setText(""+MainView.guestQueue.size());
-										break;			
+									if(flag){
+										//flag=false;
+										break;
+									}
+												
 								}
 							}
 						}

@@ -5,7 +5,14 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 
-
+/*Author: John Viscel M. Sangkal
+ * U-4L 2011-62193
+ * Made using eclipse
+ * run this class to run program.
+ * no bugs or errors
+ *
+ *
+ */
 public class SHRunner {
 		static JPanel pane = new JPanel();
 	public static void main(String[] args){

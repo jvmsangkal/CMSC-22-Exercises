@@ -1,0 +1,37 @@
+perceptron-supervised learning
+
+x1 w1
+x2 w2
+x3 w3  ----->a fires=1 not fires=0
+x4 w4
+x0(bias)
+boolean or any real number
+
+NAND
+0 0 1
+0 1 1
+1 0 1
+1 1 0
+x1 x2 z
+
+training data
+b(bias)=1
+t(treshold)=0.5
+r(rate)=0.1 //0-1
+ 						1	 2	  3
+X0 X1 X2 z W0 W1 W2 a y wnew wnew wnew
+1  0  0  1  0  0  0 0 0 
+
+a=x0w0+x1w1+x2w2
+if a>=t y=1
+   a<t  y=0
+   
+Wnew=Woriginal + r * (z-y) * Xoriginal
+
+the number of inputs is the terminate condition na hindi nagpapalit ng weights
+
+EXERCISE
+input.txt
+b t r
+training data
+print values sa terminal

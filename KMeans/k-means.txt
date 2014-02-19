@@ -1,0 +1,21 @@
+k=2
+divide the dataset by k clusters
+//iterative
+choose from the data set randomly k points
+
+compute distances of all points with respect to the chosen points
+	C1	C2
+	1,1 2,1
+1,1
+2,1
+4,4
+5,4
+compare distances and classify to which set point the point is closer
+
+next iteration
+get average of all points from each classification
+and they will be the set point
+compute distances again
+then approximate again from the distance
+
+if all has the same classification from previous. terminate
